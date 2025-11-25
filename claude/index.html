@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Программиста</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.6;
+            font-size: 1.05em;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contacts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 12px 24px;
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            .skills {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Заголовок -->
+        <div class="card header">
+            <div class="avatar">💻</div>
+            <h1>Иван Иванов</h1>
+            <p class="subtitle">Full Stack Developer</p>
+        </div>
+
+        <!-- О себе -->
+        <div class="card">
+            <h2>О себе</h2>
+            <p>
+                Опытный разработчик с 5+ годами опыта создания веб-приложений.
+                Специализируюсь на современных технологиях и люблю решать сложные задачи.
+                Стремлюсь писать чистый, поддерживаемый код и следую лучшим практикам разработки.
+            </p>
+        </div>
+
+        <!-- Навыки -->
+        <div class="card">
+            <h2>Навыки</h2>
+            <div class="skills">
+                <div class="skill">JavaScript</div>
+                <div class="skill">Python</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Git</div>
+                <div class="skill">Docker</div>
+                <div class="skill">TypeScript</div>
+            </div>
+        </div>
+
+        <!-- Контакты -->
+        <div class="card">
+            <h2>Контакты</h2>
+            <div class="contacts">
+                <a href="mailto:email@example.com" class="contact-item">
+                    📧 Email
+                </a>
+                <a href="https://github.com/username" class="contact-item" target="_blank">
+                    🔗 GitHub
+                </a>
+                <a href="https://linkedin.com/in/username" class="contact-item" target="_blank">
+                    💼 LinkedIn
+                </a>
+                <a href="https://t.me/username" class="contact-item" target="_blank">
+                    ✈️ Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
